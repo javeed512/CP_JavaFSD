@@ -1,0 +1,22 @@
+package com.sbi.atm;
+
+/*
+ * @Author: Pratik
+ * 
+ * Desp: deposit() is implemented here
+ */
+
+
+public class BankImp1 implements  IBank{
+
+	@Override
+	public void deposit() {
+
+
+				System.out.println("Deposit success..");
+		
+		
+	}
+
+	
+}

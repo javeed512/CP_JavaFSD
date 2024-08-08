@@ -1,0 +1,11 @@
+package com.sbi.atm;
+
+/*
+ * @Author: Javeed TL
+ * 
+ * 
+ */
+
+public interface IBank {
+
+}

@@ -1,0 +1,24 @@
+package com.wipro.demo;
+
+import java.lang.*;    // default package
+
+public class Demo extends Object {
+
+	public static void main(String[] a1) {
+
+			int x = 10;
+			
+			//int String = 60;
+			
+			Object o = new String(); // runtime polymorphism
+			
+			Object d1 = new Demo();
+			
+			System.out.println(o);
+			
+			System.out.println(d1);
+			
+
+	}
+
+}
