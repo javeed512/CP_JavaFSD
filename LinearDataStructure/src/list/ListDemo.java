@@ -19,7 +19,7 @@ public class ListDemo {
 		
 		List<Object>   list =     new Vector<Object>();
 		
-			list.add(100);
+			list.add(100); // new Integer(100)
 			list.add(4.555);
 			list.add("hello");
 			list.add(new ListDemo());

@@ -62,18 +62,9 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return  eid+"";
+		return "Employee [eid=" + eid + ", ename=" + ename + ", salary=" + salary + "] \n";
 	}
 
-	
-	
-	
-	
-	
-	
-
-	
-	
 	
 
 }
