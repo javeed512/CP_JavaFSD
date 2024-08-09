@@ -1,7 +1,9 @@
 package list;
 
-import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Vector;
 
 public class ListDemo {
 
@@ -13,7 +15,9 @@ public class ListDemo {
 		//DS is growable array or dynamic array
 		
 		// initial capacity is 10
-		List<Object>   list =     new ArrayList<Object>();
+		//List<Object>   list =     new ArrayList<Object>();
+		
+		List<Object>   list =     new Vector<Object>();
 		
 			list.add(100);
 			list.add(4.555);
@@ -23,6 +27,21 @@ public class ListDemo {
 			list.add(null);
 		
 		System.out.println(list);
+		
+		
+		Iterator<Object> it =	list.iterator();
+		
+		while (it.hasNext()) {
+			Object object = it.next();
+			
+			System.out.println(object);
+			
+		}
+		
+		
+		
+		
+				
 
 	}
 
