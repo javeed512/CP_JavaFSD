@@ -62,6 +62,27 @@ Types of Functional interfaces and Lambda Expressions:
 
 
 
+java.time.*;
+
+Date Time API
+
+LocalDate
+LocalTime
+LocalDateTime
+
+
+getXxx();
+
+of();
+
+isXx();
+
+plusXX();
+minusXX();
+
+
+
+
 
 
 
