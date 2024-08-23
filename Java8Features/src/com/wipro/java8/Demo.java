@@ -17,6 +17,17 @@ public class Demo {
 	System.out.println("Length is: "+mi.findLength("Javeed"));
 
 
+		
+		MyInterface.m1();
+		
+		mi.m2();
+		
+		
+		
+		
+	
+	
+	
 	}
 
 }
