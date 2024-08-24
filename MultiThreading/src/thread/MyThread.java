@@ -3,14 +3,20 @@ package thread;
 public class MyThread extends Thread  { // inheritance  IS-A Relationship
 
 	@Override
-	public void run() {
+	public  void run() {
 
 		//System.out.println(Thread.currentThread().getName());
 
+		
+		
 		for (int i = 0; i < 5; i++) {
 
-			System.out.println(Thread.currentThread().getName());
+			
+				System.out.println(Thread.currentThread().getName());
 
+			
+			
+			
 		}
 
 	}
