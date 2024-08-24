@@ -1,5 +1,0 @@
-package com.sbi.atm;
-
-public interface IBank {
-
-}
