@@ -27,9 +27,9 @@ public class ConcurrentHashMapWithThreads extends Thread {
 		ConcurrentHashMapWithThreads t = new ConcurrentHashMapWithThreads();
 		t.start();
 
-		for (Object o : map.entrySet()) {
-			Object s = o;
-			System.out.println(s);
+		for (Object entry : map.entrySet()) {
+		
+			System.out.println(entry);
 			Thread.sleep(1000);
 		}
 		System.out.println(map);

@@ -19,6 +19,9 @@ public class InstanceDemo {
 		System.out.println(e2);
 		
 		System.out.println(e1);
+		
+		@SuppressWarnings("unused")
+		int x = 99;
 
 
 	}

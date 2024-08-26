@@ -1,3 +1,5 @@
+
+
 package instance;
 
 public class Employee { // pojo class or entity class
@@ -20,7 +22,7 @@ public class Employee { // pojo class or entity class
 	
 	
 	
-	
+	@Deprecated
 	public void setEid(int eid) {
 		this.eid = eid;
 	}
