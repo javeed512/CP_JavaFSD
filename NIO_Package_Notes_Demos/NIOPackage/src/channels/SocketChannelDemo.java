@@ -17,7 +17,7 @@ public class SocketChannelDemo {
 
 	public static void main(String[] args) throws IOException {
 		SocketChannel server = SocketChannel.open();
-		SocketAddress socketAddr = new InetSocketAddress("localhost", 3306);
+		SocketAddress socketAddr = new InetSocketAddress("192.168.0.107", 3306);
 		server.connect(socketAddr);
 
 		Selector selector = Selector.open();
@@ -33,12 +33,21 @@ public class SocketChannelDemo {
 		ByteBuffer buffer = ByteBuffer.allocate(1024);
 		while (fileChannel.read(buffer) > 0) {
 			buffer.flip();
+			
+			while (buffer.hasRemaining()) {
+
+				System.out.print((char) buffer.get());
+				
+			}
+			
+			System.out.println();
+			
 			server.write(buffer);
 			buffer.clear();
 		}
 
 		fileChannel.close();
-		System.out.println("File Sent");
+		System.out.println("File Sent to the Socket Channel");
 		server.close();
 	}
 

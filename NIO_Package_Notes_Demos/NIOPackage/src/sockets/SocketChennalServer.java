@@ -13,7 +13,7 @@ public class SocketChennalServer {
 	
 	 public static void main(String[] args) throws IOException {
 	      SocketChannel server = SocketChannel.open();
-	      SocketAddress socketAddr = new InetSocketAddress("localhost", 9000);
+	      SocketAddress socketAddr = new InetSocketAddress("localhost", 9000);  // server address and port
 	      server.connect(socketAddr);
 	      Path path = Paths.get("C:/Test/input.txt");
 	      FileChannel fileChannel = FileChannel.open(path);
