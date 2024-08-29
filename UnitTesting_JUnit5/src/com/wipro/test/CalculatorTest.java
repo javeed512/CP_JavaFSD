@@ -1,6 +1,8 @@
 package com.wipro.test;
 
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -8,6 +10,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import com.wipro.java.Calculator;
@@ -52,6 +55,7 @@ class CalculatorTest {
 
 	@Test
 	@DisplayName("Test ADD")
+	@Tag("t1")
 	void testAdd() {
 
 		int actual = cal.add(5, 5);
@@ -64,6 +68,8 @@ class CalculatorTest {
 
 	@Test
 	@DisplayName("Test SUB")
+	
+	@Tag("t1")
 	void testSub() {
 
 		int actual = cal.sub(15, 5);
@@ -85,5 +91,21 @@ class CalculatorTest {
 		System.out.println("mul tested");
 
 	}
+	
+	@Test
+	void testDiv() {
+		
+		String name = "javeed";
+	
+		assertThrows(NullPointerException.class, ()->{ System.out.println(name.length()); });
+		
+		
+	}
+	
+	
+	
+	
+	
+	
 
 }

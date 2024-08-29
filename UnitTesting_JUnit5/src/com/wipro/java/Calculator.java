@@ -19,5 +19,12 @@ public class Calculator { // service class
 		return a * b;
 
 	}
+	
+	
+	public int div(int a, int b)throws ArithmeticException {
+
+		return a / b;
+
+	}
 
 }
