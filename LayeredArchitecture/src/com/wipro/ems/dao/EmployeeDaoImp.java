@@ -7,15 +7,27 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+
 import com.wipro.ems.pojo.Employee;
+import com.wipro.ems.service.EmployeeServiceImp;
 
 public class EmployeeDaoImp implements IEmployeeDAO {
 
 	Connection conn = DBUtil.getDBConnection();
 
+	
+	Logger logger =		Logger.getLogger(EmployeeDaoImp.class);
+	
+	
+	
 	@Override
 	public int addEmployee(Employee emp) {
 		// jdbc
+		logger.setLevel(Level.ALL);
+		
+			logger.info("employee data inserted from DAO");
 
 		String insertQuery = "insert into Employees values(?,?,?)";
 		int count = 0;

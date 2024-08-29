@@ -3,6 +3,9 @@ package com.wipro.ems.presentation;
 import java.util.List;
 import java.util.Scanner;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+
 import com.wipro.ems.exceptions.EmployeeNotFoundException;
 import com.wipro.ems.pojo.Employee;
 import com.wipro.ems.service.EmployeeServiceImp;
@@ -11,13 +14,22 @@ import com.wipro.ems.service.IEmployeeService;
 public class Client {
 
 	static Scanner scanner = new Scanner(System.in);
+	
+				
+				
 
 	public static void main(String[] args) {
 
+		Logger logger =		Logger.getLogger(Client.class);
+		
+			logger.setLevel(Level.INFO);
+		
 		IEmployeeService service = new EmployeeServiceImp();
 
 		boolean flag = true;
 
+			logger.info("EMS Application started");
+		
 		System.out.println("******* WELCOME TO EMS *******");
 
 		while (flag) {
@@ -37,6 +49,8 @@ public class Client {
 			switch (choice) {
 			case 1:
 
+					logger.debug("Add option selected");
+					
 				Employee emp = getEmployee();
 
 				// addEmp() from service
@@ -81,7 +95,11 @@ public class Client {
 				else {
 
 					try {
+							logger.error("Delete Failed Error occur");
+						
 						throw new EmployeeNotFoundException();
+						
+						
 					} catch (EmployeeNotFoundException e) {
 
 						// e.printStackTrace();
