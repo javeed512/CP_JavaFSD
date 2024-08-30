@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import com.wipro.ems.exceptions.EmployeeNotFoundException;
 import com.wipro.ems.pojo.Employee;
@@ -14,22 +15,21 @@ import com.wipro.ems.service.IEmployeeService;
 public class Client {
 
 	static Scanner scanner = new Scanner(System.in);
-	
-				
-				
 
 	public static void main(String[] args) {
 
-		Logger logger =		Logger.getLogger(Client.class);
-		
-			logger.setLevel(Level.INFO);
-		
+		PropertyConfigurator.configure("log4j.properties");
+
+		Logger logger = Logger.getLogger(Client.class);
+
+		//logger.setLevel(Level.INFO);
+
 		IEmployeeService service = new EmployeeServiceImp();
 
 		boolean flag = true;
 
-			logger.info("EMS Application started");
-		
+		logger.info("EMS Application started");
+
 		System.out.println("******* WELCOME TO EMS *******");
 
 		while (flag) {
@@ -49,8 +49,8 @@ public class Client {
 			switch (choice) {
 			case 1:
 
-					logger.debug("Add option selected");
-					
+				logger.info("Add option selected");
+
 				Employee emp = getEmployee();
 
 				// addEmp() from service
@@ -95,11 +95,10 @@ public class Client {
 				else {
 
 					try {
-							logger.error("Delete Failed Error occur");
-						
+						logger.error("Delete Failed Error occur");
+
 						throw new EmployeeNotFoundException();
-						
-						
+
 					} catch (EmployeeNotFoundException e) {
 
 						// e.printStackTrace();
@@ -142,10 +141,12 @@ public class Client {
 
 			case 5:
 
-					List<Employee> list =	service.selectAll();
-					
-						list.forEach( (e1)->{System.out.println(e1);}  );
-				
+				List<Employee> list = service.selectAll();
+
+				list.forEach((e1) -> {
+					System.out.println(e1);
+				});
+
 				break;
 
 			case 6:
@@ -157,9 +158,9 @@ public class Client {
 				break;
 
 			default:
-				
-					System.err.println("Invalid Option");
-				
+
+				System.err.println("Invalid Option");
+
 				break;
 			}
 

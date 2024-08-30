@@ -21,7 +21,7 @@ public class EmployeeServiceImp implements IEmployeeService {
 
 	public EmployeeServiceImp() {
 		
-		logger.setLevel(Level.ALL);
+		//logger.setLevel(Level.ALL);
 		
 			logger.info("EmployeeService object created...");
 			
@@ -34,7 +34,7 @@ public class EmployeeServiceImp implements IEmployeeService {
 	@Override
 	public int addEmployee(Employee emp) {
 		
-		logger.info("add service called..");
+		logger.debug("add service called..");
 
 		return dao.addEmployee(emp);
 	}
@@ -47,6 +47,8 @@ public class EmployeeServiceImp implements IEmployeeService {
 
 	@Override
 	public int deleteEmployeeById(int eid) {
+		
+		logger.error("some error in delete method service");
 
 		return dao.deleteEmployeeById(eid);
 	}
