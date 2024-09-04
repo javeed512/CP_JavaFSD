@@ -37,6 +37,8 @@ class Employee{
 
     getCustomer(){
 
+        const c1:Customer;
+
          const data:Customer =     {"cid":501,"cname":"javeed","amount":8000}
 
             //const customer = new Customer();
