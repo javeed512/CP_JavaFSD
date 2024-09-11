@@ -1,0 +1,135 @@
+JSP Elements:
+
+1. JSP Scriptlet  <%   any java code %>
+2. JSP Expression  <%=  java exp to print   %>
+3. JSP Declaration <%!  methods,blocks, instance,static vars   %>
+4. JSP Directives   <%@  page     %>
+5. JSP action tags
+6. EL Expression
+
+
+
+
+JSP Implicit Objects/variables:
+----------------------------
+1.out
+2.request
+3.response
+4.session
+5. application
+6. page
+7. pageContext
+8. exception
+9. config
+
+
+
+jsp page
+hello.jsp
+------------
+<h1>welcome</h1>
+hello friends
+
+<%
+
+int x =90;
+out.print("x value "+x);
+
+
+
+%>
+
+<%=  x %>
+
+
+<%!
+
+PageContext pageContext;
+
+static String name;
+ int eid;
+public void m1(){
+
+	
+
+}
+
+static{
+
+
+}
+
+
+
+ %>
+
+
+
+
+AUTO - GENERATED SERVLET:
+=========================
+
+class hello_servlet extends  HttpServlet{
+
+
+	static String name;
+		 int eid;
+ 
+ 		PageContext pageContext;
+ 
+		public void m1(){
+
+			JspWriter out =	pageContext.getOut();
+	
+				out.print("m1() is called...");
+
+			}
+
+		static{
+
+
+		}
+	
+	
+	jspService(request,response){
+
+		
+
+		out,application,session,config,exception
+
+		
+		pageContext = PageContext.OUT;
+	
+
+	out.print("<h1>welcome</h1>  hello friends");
+
+		int x =90;
+		out.print("x value "+x);
+		
+		out.print("<br> "+ LocalDate.now());
+		
+		out.print(x);
+
+		static String name;
+
+		public void m1(){
+
+	
+
+		}
+		
+
+	}
+
+
+
+	
+
+
+}
+
+
+
+
+
+
