@@ -45,6 +45,9 @@ public class MyServlet extends HttpServlet {
 		
 					out.print("welcome "+uname +"<br>");
 					out.print("your password "+pwd);
+					
+					
+					
 		
 	}
 
