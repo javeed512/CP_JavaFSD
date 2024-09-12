@@ -25,25 +25,25 @@ public class App {
 
 		Transaction tr = session.beginTransaction();
 
+		Employee emp = new Employee();
+		emp.setEid(105);
+		emp.setEname("raju");
+		emp.setSalary(15000);
+
+		 Serializable ser = session.save(emp); // save() insert record into DB
+
+		 System.out.println(ser.toString() + " record inserted");
+
+		// session.update(emp); // update() update record into DB
+
 		/*
-		 * Employee emp = new Employee(); emp.setEid(121); emp.setEname("javeed khan");
-		 * emp.setSalary(88000);
+		 * Employee e1 = session.find(Employee.class, 121);
+		 * 
+		 * System.out.println(e1);
+		 * 
+		 * session.delete(e1);
 		 */
 
-		//Serializable ser = session.save(emp);  // save() insert record into DB
-
-		//System.out.println(ser.toString() + "  record inserted");
-		
-			//session.update(emp);  // update() update record into DB
-			
-			
-		Employee e1 =	  session.find(Employee.class, 121);
-			
-		System.out.println(e1);
-		
-		session.delete(e1);
-		
-		
 		tr.commit();
 
 	}

@@ -3,10 +3,22 @@ package com.wipro.orm.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="Emp_Table")
+
+@NamedQueries(  {
+				@NamedQuery(name = "getAllEmployees", query = "select e from Employee e") ,
+				@NamedQuery(name = "getSorted", query = "select e from Employee e  order by e.ename")
+
+				}	
+		
+		    )
+
+
 public class Employee { // Entity  ---->map----> Table Emp_Table(eid,emp_name,salary)
 	
 	@Id
