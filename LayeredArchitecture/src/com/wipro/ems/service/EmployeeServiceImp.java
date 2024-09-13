@@ -27,7 +27,7 @@ public class EmployeeServiceImp implements IEmployeeService {
 			
 		
 
-		dao = new EmployeeDaoImp();
+		dao = new EmployeeDaoImp();// tight coupling
 
 	}
 
