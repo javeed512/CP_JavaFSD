@@ -1,12 +1,12 @@
 package com.wipro.springcore;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import com.wipro.springcore.service.IStudentService;
+import com.wipro.springcore.beans.Student;
 import com.wipro.springcore.service.StudentServiceImp;
 
 @Configuration
@@ -30,6 +30,15 @@ public class Client {
 			service.getService();
 		
 	}
+	
+		@Bean
+	 public Student  getObj() {
+		 
+		 
+		 
+		 return new Student(121,"javeed");
+	 }
+	
 	
 	
 

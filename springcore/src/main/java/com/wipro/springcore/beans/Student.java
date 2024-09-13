@@ -2,7 +2,7 @@ package com.wipro.springcore.beans;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Student {
 	
 	private int sid;

@@ -12,9 +12,15 @@ public class StudentDaoImp implements IStudentDao {
 	@Autowired
 	private Student student; // DI or Autowiring
 	
+	
+	
+	
+	
 	public StudentDaoImp() {
 		
 		System.out.println("StudentDaoImp() obj created");
+		
+		
 		
 	}
 	
@@ -24,6 +30,8 @@ public class StudentDaoImp implements IStudentDao {
 	public Student getDao() {
 
 		System.out.println("dao method called after getting  student obj");
+		
+		System.out.println(student);
 		
 		return student;
 	}
