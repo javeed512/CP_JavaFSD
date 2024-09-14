@@ -1,0 +1,26 @@
+package com.wipro.springrestapi.restcontroller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/employees")
+public class EmployeeRestController {
+	
+	
+			@GetMapping("/get/{eid}")
+			public String   getById(@PathVariable  int eid) {
+				
+				
+				return   eid+" Hello from Employee";
+				
+			}
+	
+	
+			
+			
+	
+
+}

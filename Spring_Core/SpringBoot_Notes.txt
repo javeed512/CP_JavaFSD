@@ -74,7 +74,7 @@ Spring Boot product given by pivotal company which help us to overcome above com
 4. spring boot have embedded tomcat server.
 5. spring boot have embedded Database H2 DB.
 6. spring boot projects can be use for creating Console App, Web App , Enterprise App , Restful App
-
+7. spring boot reduce boiler plate code
 spring boot does not support xml and jsp by default.
 
 
