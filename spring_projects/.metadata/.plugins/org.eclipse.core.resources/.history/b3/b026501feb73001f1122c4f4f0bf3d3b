@@ -1,0 +1,49 @@
+package com.wipro.restapi.datajpa.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.wipro.restapi.datajpa.entity.Employee;
+import com.wipro.restapi.datajpa.repository.EmployeeRepository;
+
+
+@Service
+public class EmployeeServiceImp implements IEmployeeService {
+
+	@Autowired
+	 private  EmployeeRepository repo;
+	
+	
+	@Override
+	public Employee addEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee updateEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee getEmployeeById(int eid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteEmployeeById(int eid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

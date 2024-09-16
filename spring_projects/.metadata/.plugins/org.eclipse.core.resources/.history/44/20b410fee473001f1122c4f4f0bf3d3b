@@ -1,0 +1,11 @@
+package com.wipro.restapi.datajpa.entity;
+
+public class Employee {
+	
+	private int eid;
+	private String ename;
+	private double salary;
+	
+	
+
+}

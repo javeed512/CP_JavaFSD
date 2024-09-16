@@ -1,0 +1,5 @@
+package com.wipro.restapi.datajpa.restcontroller;
+
+public class EmployeeRestController {
+
+}

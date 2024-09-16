@@ -1,0 +1,47 @@
+package com.wipro.restapi.datajpa.restcontroller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.wipro.restapi.datajpa.entity.Employee;
+import com.wipro.restapi.datajpa.service.IEmployeeService;
+
+@RestController
+public class EmployeeRestController {
+	
+		@Autowired
+		private IEmployeeService service;
+	
+	
+	
+	public Employee addEmployee(Employee emp) {
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	public Employee updateEmployee(Employee emp);
+
+	public Employee getEmployeeById(int eid);
+
+	public String deleteEmployeeById(int eid);
+	
+	public List<Employee>  getAllEmployees();
+	
+	
+	
+
+}
