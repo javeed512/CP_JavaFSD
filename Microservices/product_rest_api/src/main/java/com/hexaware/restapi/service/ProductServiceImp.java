@@ -31,6 +31,28 @@ public class ProductServiceImp implements IProductService {
 
 		return repo.save(product);
 	}
+	
+	
+	
+	@Override
+	public Product updateProduct(ProductDTO productDTO) {
+
+		Product product = new Product(); // entity class obj
+		
+		product.setPid(productDTO.getPid());
+		product.setPname(productDTO.getPname());
+		product.setPrice(productDTO.getPrice());
+
+		return repo.save(product);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 	@Override
 	public ProductDTO getById(int pid) {

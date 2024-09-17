@@ -6,9 +6,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -36,6 +39,14 @@ public class ProductRestController {
 		return service.addProduct(productDTO);
 	}
 
+	
+	@PutMapping(value="/update",consumes = "application/json")
+	public Product updateProduct(@RequestBody ProductDTO productDTO) {
+
+		return service.updateProduct(productDTO);
+	}
+	
+	
 	@GetMapping("/get/{pid}")
 	public ProductDTO getById(@PathVariable @Valid @Min(1) int pid) throws ProductNotFoundException {
 
@@ -80,14 +91,14 @@ public class ProductRestController {
 	 * }
 	 */
 
-	/*
-	 * @ExceptionHandler({ProductNotFoundException.class}) public
-	 * ResponseEntity<String> handleProductNotFoundExp(ProductNotFoundException pe)
-	 * {
-	 * 
-	 * return new ResponseEntity<String>(pe.getMessage(), HttpStatus.BAD_REQUEST);
-	 * 
-	 * }
-	 */
+	
+	  @ExceptionHandler({ProductNotFoundException.class}) public
+	  ResponseEntity<String> handleProductNotFoundExp(ProductNotFoundException pe)
+	  {
+	  
+	  return new ResponseEntity<String>(pe.getMessage(), HttpStatus.BAD_REQUEST);
+	  
+	  }
+	 
 
 }

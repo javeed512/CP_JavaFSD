@@ -14,5 +14,6 @@ public interface IProductService {
 	 
 	 public List<Product>  getAllProducts();
 	
+	 public Product updateProduct(ProductDTO productDTO);
 	
 }

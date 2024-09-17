@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 public class Product {  // Product Entity class 
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int pid;
 	private String pname;
 	private double price;
