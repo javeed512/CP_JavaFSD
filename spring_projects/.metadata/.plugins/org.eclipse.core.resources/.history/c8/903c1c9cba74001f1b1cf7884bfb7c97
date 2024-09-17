@@ -1,0 +1,20 @@
+package com.wipro.restapi.datajpa.restcontroller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+import com.wipro.restapi.datajpa.exceptions.EmployeeNotFoundException;
+
+public class GlobalExceptionHandler {
+	
+	
+	@ResponseStatus(reason="Emp not found ", code = HttpStatus.BAD_REQUEST)
+	@ExceptionHandler(EmployeeNotFoundException.class)
+	public  void  handleException() {
+		
+		
+		
+	}
+
+}

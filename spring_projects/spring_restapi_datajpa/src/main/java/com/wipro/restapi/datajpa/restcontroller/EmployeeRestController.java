@@ -3,17 +3,21 @@ package com.wipro.restapi.datajpa.restcontroller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wipro.restapi.datajpa.entity.Employee;
+import com.wipro.restapi.datajpa.exceptions.EmployeeNotFoundException;
 import com.wipro.restapi.datajpa.service.IEmployeeService;
 
 @RestController
@@ -33,16 +37,40 @@ public class EmployeeRestController {
 	@PutMapping("/update")
 	public Employee update(@RequestBody Employee emp) {
 
+		
+		
 		return service.updateEmployee(emp);
 
 	}
 
 	@GetMapping("/getbyid/{eid}")
-	public Employee getById(@PathVariable int eid) {
+	public Employee getById(@PathVariable int eid) throws EmployeeNotFoundException {
 
-		return service.getEmployeeById(eid);
+	Employee emp =	 service.getEmployeeById(eid);
+	
+			if(emp==null) {
+				
+				throw  new EmployeeNotFoundException();
+				
+			}
+			
+		return emp;	
 
 	}
+	
+	/*
+	 * @ResponseStatus(reason="Emp not found ", code = HttpStatus.BAD_REQUEST)
+	 * 
+	 * @ExceptionHandler(EmployeeNotFoundException.class) public void
+	 * handleException() {
+	 * 
+	 * 
+	 * 
+	 * }
+	 */
+	
+	
+	
 
 	@DeleteMapping("/deletebyid/{eid}")
 	public String deleteEmployeeById(@PathVariable int eid) {
