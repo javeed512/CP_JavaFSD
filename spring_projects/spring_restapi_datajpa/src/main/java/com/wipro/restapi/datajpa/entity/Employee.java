@@ -2,14 +2,35 @@ package com.wipro.restapi.datajpa.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 @Entity
 public class Employee {
 
 	@Id
 	private int eid;
+	
+	
+	@NotEmpty
+	@NotNull
 	private String ename;
+	
+	@Min(value = 5000)
+	@Max(value = 99000)
 	private double salary;
+	
+	@Email
+	private String email;
+	
+	
+	@Pattern(regexp = "[A-Z][a-z]{4,15}" )
+	private String city;
+	
 
 	public Employee() {
 		super();
@@ -44,6 +65,31 @@ public class Employee {
 
 	public void setSalary(double salary) {
 		this.salary = salary;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
 	}
 
 	@Override

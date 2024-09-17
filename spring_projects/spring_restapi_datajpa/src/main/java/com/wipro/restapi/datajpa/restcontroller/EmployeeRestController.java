@@ -3,6 +3,7 @@ package com.wipro.restapi.datajpa.restcontroller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -80,6 +81,12 @@ public class EmployeeRestController {
 
 	}
 	
+	@DeleteMapping("/deletebyename/{ename}")
+	public ResponseEntity<String>  deleteByEname(@PathVariable String ename){
+		
+		return service.deleteByEname(ename);
+		
+	}
 	
 	
 	

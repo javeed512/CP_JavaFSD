@@ -2,6 +2,8 @@ package com.wipro.restapi.datajpa.service;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
+
 import com.wipro.restapi.datajpa.entity.Employee;
 
 public interface IEmployeeService {
@@ -21,5 +23,8 @@ public interface IEmployeeService {
 	public List<Employee>  getBySalGT(double salary);
 
 	public List<Employee>  getBySortedSal(double salary);
+	
+	public  ResponseEntity<String> deleteByEname(String ename);
+	
 	
 }

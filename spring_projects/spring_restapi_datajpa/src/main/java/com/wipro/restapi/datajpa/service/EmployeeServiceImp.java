@@ -3,12 +3,18 @@ package com.wipro.restapi.datajpa.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.wipro.restapi.datajpa.entity.Employee;
 import com.wipro.restapi.datajpa.repository.EmployeeRepository;
 
+import jakarta.transaction.Transactional;
 
+@Transactional
 @Service
 public class EmployeeServiceImp implements IEmployeeService {
 
@@ -64,8 +70,23 @@ public class EmployeeServiceImp implements IEmployeeService {
 
 	@Override
 	public List<Employee> getBySortedSal(double salary) {
+		
+	
+		
+		
+		return repo.findAll(Sort.by("salary").descending());
+		
 		// TODO Auto-generated method stub
-		return repo.findAllSorted(salary);
+		//return repo.findAllSorted(salary);
+	}
+
+	@Override
+	public ResponseEntity<String> deleteByEname(String ename) {
+		
+		repo.deleteByEname(ename);
+		
+		return new ResponseEntity<String>("Record deleted..",HttpStatus.ACCEPTED);
+		
 	}
 
 }
