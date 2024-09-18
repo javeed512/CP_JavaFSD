@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=spring_restapi_datajpa/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.wipro.restapi.datajpa.service{IEmployeeService.java[IEmployeeService" modifiers="513" timestamp="1726546576937"/>
+    <typeInfo handle="=springsecurity/C:\/Users\/DELL\/.m2\/repository\/org\/springframework\/security\/spring-security-core\/6.3.3\/spring-security-core-6.3.3.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.security=/=/maven.artifactId=/spring-security-core=/=/maven.version=/6.3.3=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.security.core.userdetails(UserDetails.class[UserDetails" modifiers="1537" timestamp="1726642529606"/>
+    <typeInfo handle="=springsecurity/C:\/Users\/DELL\/.m2\/repository\/org\/springframework\/security\/spring-security-core\/6.3.3\/spring-security-core-6.3.3.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.security=/=/maven.artifactId=/spring-security-core=/=/maven.version=/6.3.3=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.security.core.userdetails(UserDetailsService.class[UserDetailsService" modifiers="1537" timestamp="1726642529606"/>
 </typeInfoHistroy>
