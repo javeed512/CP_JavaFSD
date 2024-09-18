@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="EmployeeServiceImpTest" project="spring_restapi_datajpa" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="com.wipro.restapi.datajpa.service.EmployeeServiceImpTest" time="4.203" displayname="EmployeeServiceImpTest" uniqueid="[engine:junit-jupiter]/[class:com.wipro.restapi.datajpa.service.EmployeeServiceImpTest]">
+    <testcase name="testAddEmployee" classname="com.wipro.restapi.datajpa.service.EmployeeServiceImpTest" time="4.125" displayname="testAddEmployee()" uniqueid="[engine:junit-jupiter]/[class:com.wipro.restapi.datajpa.service.EmployeeServiceImpTest]/[method:testAddEmployee()]"/>
+    <testcase name="testGetEmployeeById" classname="com.wipro.restapi.datajpa.service.EmployeeServiceImpTest" time="0.017" displayname="testGetEmployeeById()" uniqueid="[engine:junit-jupiter]/[class:com.wipro.restapi.datajpa.service.EmployeeServiceImpTest]/[method:testGetEmployeeById()]"/>
+    <testcase name="testGetByEname" classname="com.wipro.restapi.datajpa.service.EmployeeServiceImpTest" time="0.013" displayname="testGetByEname()" uniqueid="[engine:junit-jupiter]/[class:com.wipro.restapi.datajpa.service.EmployeeServiceImpTest]/[method:testGetByEname()]"/>
+    <testcase name="testGetAllEmployees" classname="com.wipro.restapi.datajpa.service.EmployeeServiceImpTest" time="0.013" displayname="testGetAllEmployees()" uniqueid="[engine:junit-jupiter]/[class:com.wipro.restapi.datajpa.service.EmployeeServiceImpTest]/[method:testGetAllEmployees()]"/>
+    <testcase name="testDeleteByEname" classname="com.wipro.restapi.datajpa.service.EmployeeServiceImpTest" time="0.014" displayname="testDeleteByEname()" uniqueid="[engine:junit-jupiter]/[class:com.wipro.restapi.datajpa.service.EmployeeServiceImpTest]/[method:testDeleteByEname()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,55 @@
+package com.wipro.restapi.datajpa.service;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class EmployeeServiceImpTest {
+	
+	
+		@Autowired
+		IEmployeeService service;
+		
+		@Autowired
+		Employee emp;
+
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+	}
+
+	@Test
+	void testAddEmployee() {
+		
+		
+			service.addEmployee();
+		
+	}
+
+	@Test
+	void testGetEmployeeById() {
+		
+	}
+
+	@Test
+	void testGetAllEmployees() {
+		
+	}
+
+	@Test
+	void testGetByEname() {
+		
+	}
+
+	@Test
+	void testDeleteByEname() {
+		
+	}
+
+}

@@ -1,0 +1,31 @@
+package com.wipro.restapi.datajpa.restcontroller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class EmployeeRestControllerTest {
+
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+	}
+
+	@Test
+	void testAdd() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testGetById() {
+		fail("Not yet implemented");
+	}
+
+}

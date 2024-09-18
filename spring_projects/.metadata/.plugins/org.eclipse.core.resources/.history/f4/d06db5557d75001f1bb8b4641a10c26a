@@ -1,0 +1,38 @@
+package com.wipro.restapi.datajpa.restcontroller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.web.client.RestTemplate;
+
+@SpringBootTest
+class EmployeeRestControllerTest {
+	
+	
+	@Autowired
+	RestTemplate restTemplate;
+	
+
+	@BeforeAll
+	static void setUpBeforeClass() throws Exception {
+	}
+
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
+	}
+
+	@Test
+	void testAdd() {
+		
+	}
+
+	@Test
+	void testGetById() {
+		
+	}
+
+}
