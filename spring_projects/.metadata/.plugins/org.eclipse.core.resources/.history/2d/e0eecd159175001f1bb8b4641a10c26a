@@ -1,0 +1,10 @@
+package com.wipro.springsecurity.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="User_Accounts")
+public class UserEntity {
+
+}

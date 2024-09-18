@@ -1,0 +1,5 @@
+package com.wipro.springsecurity.config;
+
+public class AppSecurityConfig {
+
+}

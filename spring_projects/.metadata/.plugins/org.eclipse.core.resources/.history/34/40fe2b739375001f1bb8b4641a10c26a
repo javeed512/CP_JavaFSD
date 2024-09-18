@@ -1,0 +1,21 @@
+package com.wipro.springsecurity.service;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+@Service
+public class UserDetailsServiceImp implements UserDetailsService {
+	
+	
+	
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+
+		
+		
+	}
+
+}
