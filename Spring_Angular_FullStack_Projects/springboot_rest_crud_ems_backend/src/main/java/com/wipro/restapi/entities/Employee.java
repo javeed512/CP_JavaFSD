@@ -27,7 +27,7 @@ public class Employee {
 	@Column(name = "emp_name")
 	@NotNull
 	@NotBlank
-	@Pattern(regexp = "[A-Z][a-z]{4}")
+	//@Pattern(regexp = "[A-Z][a-z]{4}")
 	private String ename;
 	
 	@Min(value = 5000)
